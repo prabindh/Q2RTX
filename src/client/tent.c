@@ -1018,7 +1018,8 @@ static void CL_RailLights(color_t color)
 }
 
 extern uint32_t d_8to24table[256];
-extern cvar_t* cvar_pt_beam_lights;
+// TODO PS
+//extern cvar_t* cvar_pt_beam_lights;
 
 static void CL_RailTrail(void)
 {
@@ -1040,7 +1041,8 @@ static void CL_RailTrail(void)
 		}
 	}
 
-    if (!cl_railtrail_type->integer || cvar_pt_beam_lights->value <= 0)
+    // PS TODO
+    if (!cl_railtrail_type->integer) // || cvar_pt_beam_lights->value <= 0)
     {
         CL_RailLights(rail_color);
     }
